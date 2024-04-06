@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ffff"
+        app:title="Edit Event"
+        app:titleTextColor="@android:color/black"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#e5ffe5"
+                tools:context=".activity.NewEventActivity">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Enter the name of the event"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/eventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/rounded_box"
+                    android:inputType="textPersonName"
+                    android:padding="12dp"
+                    android:textColor="@android:color/black"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="Venue for the event"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="sans-serif-condensed-medium"/>
+
+                <EditText
+                    android:id="@+id/new_event_location_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/rounded_box"
+                    android:hint="LOCATION"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"  />
+
+                <Spinner
+                    android:id="@+id/venue_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/button_round_background_green"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="Select sports"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="sans-serif-condensed-medium"/>
+
+                <Spinner
+                    android:id="@+id/sports_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/button_round_background_green"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Enter the number of teams of the event"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/totalSpots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/rounded_box"
+                    android:ems="10"
+                    android:hint="25 people"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Is this a paid event?"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_paid"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginEnd="12dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/paid_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Fees (in INR)"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/fees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/rounded_box"
+                        android:ems="10"
+                        android:hint="Rs. 0"
+                        android:inputType="number"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Enter a last registration date and time for the event"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dateText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_box"
+                        android:padding="12dp"
+                        android:text="25 Jan 2019"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"/>
+
+
+                    <TextView
+                        android:id="@+id/new_event_time_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="12dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/rounded_box"
+                        android:padding="12dp"
+                        android:text="3:20"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Enter the Duration of the event"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/new_event_duration_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_box"
+                        android:hint="2"
+                        android:inputType="number"
+                        android:padding="12dp"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="hours"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Enter Description about the event"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/eventDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded_box"
+                    android:gravity="top"
+                    android:hint="yaaay im excited for the event!"
+                    android:inputType="textMultiLine"
+                    android:minLines="5"
+                    android:padding="12dp"
+                    android:textColor="@android:color/black"  />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Enter contact number"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/mobile_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded_box"
+                    android:gravity="top"
+                    android:inputType="phone"
+                    android:padding="12dp"
+                    android:textColor="@android:color/black"  />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Choose a suitable image for the event"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/new_event_main_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/rounded_box"
+                        android:scaleType="centerCrop"
+                        android:transitionName="main_item_main_image" />
+
+                    <TextView
+                        android:id="@+id/image_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="24dp"
+                        android:gravity="center"
+                        android:text="Please add\nan image for your event"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+                    <Button
+                        android:id="@+id/addImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:backgroundTint="#8AC640"
+                        android:paddingStart="36dp"
+                        android:paddingEnd="36dp"
+                        android:background="@drawable/rounded_btn"
+                        android:text="Upload"
+                        android:textColor="@android:color/white" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginBottom="90dp">
+
+                    <CheckBox
+                        android:id="@+id/t_and_c_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/terms_tv"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:text="I agree agree to KheloD's Terms of Service and Privacy Policy"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#8AC640"
+            android:minHeight="52dp"
+            android:text="Create"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>

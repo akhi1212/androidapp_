@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ffff"
+        app:title="Edit Article"
+        app:titleTextColor="@android:color/black"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e5ffe5">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".activity.NewEventActivity">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Your thoughts here..."
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/article_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/rounded_box"
+                    android:padding="12dp"
+                    android:minLines="5"
+                    android:maxLines="10"
+                    android:gravity="top"
+                    android:textColor="@android:color/black"
+                    android:maxLength="5000"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Any Reference link"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/article_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/rounded_box"
+                    android:padding="12dp"
+                    android:minLines="1"
+                    android:maxLines="3"
+                    android:gravity="top"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Add an image"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/new_article_main_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/rounded_box"
+                        android:scaleType="centerCrop"
+                        android:transitionName="main_item_main_image" />
+
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/Quiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="90dp"
+                    android:backgroundTint="#8AC640"
+                    android:paddingStart="36dp"
+                    android:paddingEnd="36dp"
+                    android:background="@drawable/rounded_btn"
+                    android:text="Quiz"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Add a location (Optional)"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+                <Spinner
+                    android:id="@+id/new_article_location_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#8AC640"
+            android:minHeight="52dp"
+            android:text="Share"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="12dp"
+    app:cardBackgroundColor="@android:color/white">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:background="#fff">
+
+           <LinearLayout
+               android:background="@drawable/gradientbackground"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:paddingBottom="12dp">
+
+               <com.mikhaellopez.circularimageview.CircularImageView
+                   android:id="@+id/profile_pic"
+                   android:layout_width="85dp"
+                   android:layout_height="85dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_marginTop="25dp"
+                   android:src="@drawable/ic_user_pic"
+                   app:civ_border_color="@color/colorPrimary" />
+
+               <TextView
+                   android:id="@+id/name"
+                   android:layout_marginTop="10dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Devesh Bhatla"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   android:textSize="19sp"/>
+
+               <TextView
+                   android:id="@+id/description"
+                   android:layout_marginTop="8dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="I Love Sports"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   android:textSize="17sp"
+                   android:textAlignment="center"
+                   android:paddingStart="8dp"
+                   android:paddingEnd="8dp"
+                   android:maxLines="3"/>
+
+               <TextView
+                   android:id="@+id/sports"
+                   android:layout_marginTop="8dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Cricket"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   android:textSize="17sp"/>
+
+               <TextView
+                   android:id="@+id/sex"
+                   android:layout_marginTop="8dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Male"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   android:textSize="17sp"/>
+
+               <TextView
+                   android:id="@+id/age"
+                   android:layout_marginTop="8dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="19 years"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   android:textSize="17sp"
+                   android:visibility="gone"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp">
+
+               <LinearLayout
+                   android:orientation="horizontal"
+                   android:paddingStart="25dp"
+                   android:paddingEnd="0dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <ImageView
+                       android:layout_width="36dp"
+                       android:layout_height="36dp"
+                       android:src="@drawable/ic_user"/>
+
+                   <TextView
+                       android:id="@+id/email"
+                       android:textStyle="bold"
+                       android:layout_gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:paddingStart="12dp"
+                       android:text="Devesh@gmail.com"
+                       android:textColor="#000"
+                       android:textSize="16sp"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="12dp"
+                   android:orientation="horizontal"
+                   android:paddingStart="25dp"
+                   android:paddingEnd="0dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <ImageView
+                       android:layout_width="36dp"
+                       android:layout_height="36dp"
+                       android:src="@drawable/phone"/>
+
+                   <TextView
+                       android:id="@+id/phonenumber"
+                       android:textStyle="bold"
+                       android:textColor="#000"
+                       android:layout_gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:paddingLeft="20dp"
+                       android:text="+91 999999999"
+                       android:textSize="16sp"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="12dp"
+                   android:orientation="horizontal"
+                   android:paddingStart="25dp"
+                   android:paddingEnd="0dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <ImageView
+                       android:layout_width="36dp"
+                       android:layout_height="36dp"
+                       android:src="@drawable/liked"/>
+
+                   <TextView
+                       android:id="@+id/like_count_tv"
+                       android:textStyle="bold"
+                       android:textColor="#000"
+                       android:layout_gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:paddingStart="20dp"
+                       android:paddingEnd="0dp"
+                       android:text="502 likes"
+                       android:textSize="16sp"/>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="25dp"
+               android:paddingBottom="12dp"
+               android:layout_gravity="center_horizontal"
+               android:gravity="center_horizontal">
+
+               <ImageButton
+                   android:id="@+id/follow_btn"
+                   android:background="@android:color/white"
+                   android:layout_marginEnd="12dp"
+                   android:layout_marginStart="12dp"
+                   android:layout_gravity="center"
+                   android:layout_width="45dp"
+                   android:layout_height="45dp"
+                   android:src="@drawable/ic_user"
+                   android:tint="@color/dark_green"
+                   android:scaleType="fitCenter"
+                   android:padding="5dp"/>
+
+               <ImageButton
+                   android:id="@+id/next_btn"
+                   android:background="@android:color/white"
+                   android:layout_marginEnd="12dp"
+                   android:layout_marginStart="12dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="45dp"
+                   android:layout_height="45dp"
+                   android:src="@drawable/ic_baseline_delete_outline_24"
+                   android:textColor="#fff"
+                   android:scaleType="fitCenter"
+                   android:visibility="visible"
+                   android:tint="@color/red"/>
+
+               <ImageButton
+                   android:id="@+id/report_btn"
+                   android:background="@drawable/button_background_stroke"
+                   android:layout_marginEnd="12dp"
+                   android:layout_marginStart="12dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="45dp"
+                   android:layout_height="45dp"
+                   android:src="@drawable/ic_baseline_delete_24"
+                   android:textColor="#fff"
+                   android:scaleType="fitCenter"
+                   android:visibility="gone"/>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+   </ScrollView>
+
+</androidx.cardview.widget.CardView>

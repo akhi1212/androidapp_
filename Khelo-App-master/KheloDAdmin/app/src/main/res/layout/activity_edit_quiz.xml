@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ffff"
+        app:title="Edit quiz"
+        app:titleTextColor="@android:color/black"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e5ffe5">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="65dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".activity.NewEventActivity">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Title of the quiz :"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/quiz_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/rounded_box"
+                    android:padding="12dp"
+                    android:gravity="top"
+                    android:textColor="@android:color/black"
+                    android:hint="Name of the quiz"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Maximum number of participants :"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/quiz_max_number_of_applicants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/rounded_box"
+                    android:padding="12dp"
+                    android:gravity="top"
+                    android:textColor="@android:color/black"
+                    android:hint="Maximum number of participants"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Choose Sports : "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/sports_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/button_round_background_green"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Is this a paid quiz?"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_paid"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginEnd="12dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/paid_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Points"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/fees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/rounded_box"
+                        android:ems="10"
+                        android:hint="0 Points"
+                        android:inputType="number"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Winner Points"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/winner_points_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/rounded_box"
+                        android:ems="10"
+                        android:hint="0 Points"
+                        android:inputType="number"
+                        android:padding="12dp"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Add an image"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/new_quiz_main_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/rounded_box"
+                        android:scaleType="centerCrop"
+                        android:transitionName="main_item_main_image" />
+
+
+                    <TextView
+                        android:id="@+id/image_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="24dp"
+                        android:gravity="center"
+                        android:text="Please add\nan image for your event"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+                    <Button
+                        android:id="@+id/uploadImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:layout_marginBottom="34dp"
+                        android:backgroundTint="#8AC640"
+                        android:paddingStart="36dp"
+                        android:paddingEnd="36dp"
+                        android:text="Upload"
+                        android:background="@drawable/rounded_btn"
+                        android:textColor="@android:color/white" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="12dp">
+
+                    <CheckBox
+                        android:id="@+id/t_and_c_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/terms_tv"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:text="I agree agree to KheloD's Terms of Service and Privacy Policy"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/Quiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="90dp"
+                    android:backgroundTint="#8AC640"
+                    android:paddingStart="36dp"
+                    android:paddingEnd="36dp"
+                    android:background="@drawable/rounded_btn"
+                    android:text="Quiz"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Add a location (Optional)"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+                <Spinner
+                    android:id="@+id/new_article_location_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/create_quiz_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#8AC640"
+            android:minHeight="52dp"
+            android:text="Update"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>

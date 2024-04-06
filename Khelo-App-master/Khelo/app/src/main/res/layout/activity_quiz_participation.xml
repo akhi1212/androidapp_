@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.QuizParticipationActivity"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="60dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/back_btn"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:background="@drawable/go_back_left_arrow"
+                        android:layout_marginEnd="12dp"/>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Title"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"
+                        android:fontFamily="sans-serif-thin"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/light_green"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Rules : \n1. Select an option for a question that you think is correct. \n2. Select 'Submit Quiz' when you finish answering the questions"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/quiz_participation_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/quiz_participation_item"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/end_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_btn"
+        android:text="END QUIZ"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"/>
+
+</RelativeLayout>

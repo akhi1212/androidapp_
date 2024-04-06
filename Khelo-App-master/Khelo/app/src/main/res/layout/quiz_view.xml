@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/layout"
+    android:background="@drawable/gradient_list"
+    android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="QUIZ"
+    android:textSize="40dp"
+    android:textAlignment="center"
+    android:padding="10dp"/>
+
+    <ImageView
+        android:id="@+id/basketball"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_gravity="left"
+        android:src="@drawable/basketball" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:textColor="@android:color/background_light"
+        android:text="Write Your Question"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        />
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="  Option A"
+        android:background="#8AC640"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#8AC640"
+        android:button="@color/colorPrimary"
+        android:text="  Option B"
+
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#8AC640"
+        android:button="@color/colorPrimary"
+        android:text="  Option C"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#8AC640"
+        android:button="@color/colorPrimary"
+        android:text="  Option D"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+</RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Your Answer"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

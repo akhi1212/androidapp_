@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f0f0f0"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_layout"
+        app:title="Archived"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"/>
+
+    <SearchView
+        android:id="@+id/main_feed_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_round_background_green"
+        android:clickable="true"
+        android:focusable="true"
+        android:queryHint="Near me"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/players_item"
+        android:visibility="visible"
+        android:layout_gravity="center" />
+
+</LinearLayout>

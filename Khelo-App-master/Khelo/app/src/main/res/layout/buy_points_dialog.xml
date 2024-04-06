@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/light_green"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="12dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/event_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:text="Order Summary"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingTop="@dimen/fab_margin"
+            android:paddingBottom="@dimen/fab_margin">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="top"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="@dimen/fab_margin"
+                android:src="@drawable/points" />
+
+            <EditText
+                android:id="@+id/points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Enter number of points"
+                android:inputType="number"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingTop="@dimen/fab_margin"
+            android:paddingBottom="@dimen/fab_margin"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="To Pay : "
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/cost_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="INR 100"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:textStyle="italic|bold"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Withdrawal Method"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:id="@+id/upi_option_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/upi"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Link UPI Id"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/upi_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter UPI Id"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@color/dark_green"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/bank_option_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_bank_account"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Add Bank Account"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bank_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/account_no_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Account number"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textColor="@color/dark_green"
+                    android:layout_margin="8dp"/>
+
+                <EditText
+                    android:id="@+id/ifsc_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter IFSC Code"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textColor="@color/dark_green"
+                    android:layout_margin="8dp"/>
+
+                <EditText
+                    android:id="@+id/recipient_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Recipient Name"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textColor="@color/dark_green"
+                    android:layout_margin="8dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="12dp">
+
+            <Button
+                android:id="@+id/purchase_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@drawable/button_round_background_green"
+                android:minHeight="56dp"
+                android:text="Redeem"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="12dp"/>
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@drawable/button_background_stroke"
+                android:minHeight="56dp"
+                android:text="Cancel"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

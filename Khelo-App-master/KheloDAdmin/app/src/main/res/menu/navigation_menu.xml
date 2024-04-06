@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/view_profiles_item"
+        android:title="View Users"
+        android:icon="@drawable/ic_user_pic"/>
+
+    <item
+        android:id="@+id/view_archived_item"
+        android:title="View Archived Users"
+        android:icon="@drawable/ic_user_pic"/>
+
+    <item
+        android:id="@+id/pending_transaction_item"
+        android:title="All Pending Transactions"/>
+
+    <item
+        android:id="@+id/buy_points_item"
+        android:title="Buy More Points"/>
+
+    <item
+        android:id="@+id/sports_list_item"
+        android:title="Sports"/>
+
+    <item
+        android:id="@+id/quiz_question_item"
+        android:title="Quiz Questions"/>
+
+</menu>

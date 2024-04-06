@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextColor="@android:color/black">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/back_btn"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:background="@drawable/go_back_left_arrow"
+                        android:layout_marginEnd="12dp"/>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Title"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"
+                        android:fontFamily="sans-serif-thin"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            android:layout_margin="12dp"
+            android:background="#fff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_2">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_margin="12dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:src="@drawable/ic_user_pic"
+                    app:civ_border_color="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Score : 120"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="19sp"
+                    android:layout_marginBottom="12dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/quiz_review_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/quiz_participation_item"/>
+
+    </LinearLayout>
+
+</ScrollView>

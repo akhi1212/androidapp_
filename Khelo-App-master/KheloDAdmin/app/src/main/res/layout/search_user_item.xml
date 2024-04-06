@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    app:cardCornerRadius="25dp"
+    android:layout_margin="12dp">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:background="#fff">
+
+           <LinearLayout
+               android:background="@drawable/gradientbackground"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:paddingBottom="12dp">
+
+               <com.mikhaellopez.circularimageview.CircularImageView
+                   android:id="@+id/profile_pic"
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_marginTop="25dp"
+                   android:src="@drawable/ic_user_pic"
+                   app:civ_border_color="@color/colorPrimary" />
+
+               <TextView
+                   android:id="@+id/name"
+                   android:layout_marginTop="10dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Devesh Bhatla"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   android:textSize="19sp"/>
+
+               <TextView
+                   android:id="@+id/description"
+                   android:layout_marginTop="8dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="I Love Sports"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   android:textSize="17sp"
+                   android:textAlignment="center"
+                   android:paddingStart="8dp"
+                   android:paddingEnd="8dp"
+                   android:maxLines="3"/>
+
+               <TextView
+                   android:id="@+id/sports"
+                   android:layout_marginTop="8dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Cricket"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   android:textSize="17sp"/>
+
+               <TextView
+                   android:id="@+id/sex"
+                   android:layout_marginTop="8dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Male"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   android:textSize="17sp"/>
+
+               <TextView
+                   android:id="@+id/age"
+                   android:layout_marginTop="8dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="19 years"
+                   android:textColor="#fff"
+                   android:textStyle="bold"
+                   android:textSize="17sp"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp">
+
+               <LinearLayout
+                   android:orientation="horizontal"
+                   android:paddingLeft="25dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <ImageView
+                       android:layout_width="36dp"
+                       android:layout_height="36dp"
+                       android:src="@drawable/ic_user"/>
+
+                   <TextView
+                       android:id="@+id/email"
+                       android:textStyle="bold"
+                       android:layout_gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:paddingLeft="20dp"
+                       android:text="Devesh@gmail.com"
+                       android:textColor="#000"
+                       android:textSize="16sp"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="20dp"
+                   android:orientation="horizontal"
+                   android:paddingLeft="25dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <ImageView
+                       android:layout_width="36dp"
+                       android:layout_height="36dp"
+                       android:src="@drawable/phone"/>
+
+                   <TextView
+                       android:id="@+id/phonenumber"
+                       android:textStyle="bold"
+                       android:textColor="#000"
+                       android:layout_gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:paddingLeft="20dp"
+                       android:text="+91 999999999"
+                       android:textSize="16sp"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_marginTop="20dp"
+                   android:orientation="horizontal"
+                   android:paddingLeft="25dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <ImageView
+                       android:layout_width="36dp"
+                       android:layout_height="36dp"
+                       android:src="@drawable/liked"/>
+
+                   <TextView
+                       android:id="@+id/like_count_tv"
+                       android:textStyle="bold"
+                       android:textColor="#000"
+                       android:layout_gravity="center_vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:paddingLeft="20dp"
+                       android:text="502 likes"
+                       android:textSize="16sp"/>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="25dp"
+               android:paddingBottom="12dp">
+
+               <Button
+                   android:id="@+id/view_transactions"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/button_background_stroke"
+                   android:textColor="@color/dark_green"
+                   android:text="Transactions"
+                   android:layout_weight="1"
+                   android:layout_marginStart="12dp"
+                   android:layout_marginEnd="12dp"
+                   android:visibility="visible"/>
+
+               <Button
+                   android:id="@+id/delete_btn"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/button_background_stroke"
+                   android:textColor="#FF0000"
+                   android:text="Delete User"
+                   android:layout_weight="1"
+                   android:layout_marginStart="12dp"
+                   android:layout_marginEnd="12dp"
+                   android:visibility="visible"/>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+   </ScrollView>
+
+</androidx.cardview.widget.CardView>

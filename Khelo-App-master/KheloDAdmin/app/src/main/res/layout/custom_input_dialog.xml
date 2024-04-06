@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_green"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/dialog_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_layout"
+        app:title="Title"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/content_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="Enter Something"
+        android:textColorHint="@android:color/darker_gray"
+        android:textColor="@color/dark_green"/>
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_round_background_green"
+        android:text="Submit"
+        android:textColor="@android:color/white"
+        android:layout_margin="12dp"/>
+    
+</LinearLayout>

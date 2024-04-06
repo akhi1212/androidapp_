@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="25dp"
+    android:layout_margin="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/light_green"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Question"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/edit_btn"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_baseline_create_24"
+                android:tint="@android:color/black"
+                android:padding="8dp"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/del_btn"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_baseline_delete_24"
+                android:tint="@android:color/black"
+                android:padding="8dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="12dp"
+            android:background="@drawable/rounded_box"
+            android:padding="12dp"
+            android:hint="First Option"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="12dp"
+            android:background="@drawable/rounded_box"
+            android:padding="12dp"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"
+            android:hint="Second Option"/>
+
+        <TextView
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="12dp"
+            android:background="@drawable/rounded_box"
+            android:padding="12dp"
+            android:hint="Third Option"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/option4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="12dp"
+            android:background="@drawable/rounded_box"
+            android:padding="12dp"
+            android:hint="Fourth Option"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/white"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    app:titleTextColor="@android:color/black"
+                    app:title="Add Questions"/>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/light_green"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Guidelines : \n1. Select the correct option for each question. \n2. The maximum limit for the questions is 10 and minimum limit is 4. \n3. Select 'Post Quiz' once you have added all the questions."
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:background="@color/light_green"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/light_green"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Write Your Question"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:layout_marginBottom="20dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/question"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:maxLength="120"
+                            android:padding="10dp"
+                            android:textColor="@android:color/black"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/option1_box"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:onClick="onCheckboxClicked"
+                            android:background="@android:color/darker_gray"/>
+
+                        <EditText
+                            android:id="@+id/option1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/rounded_box"
+                            android:padding="12dp"
+                            android:hint="First Option"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="1"
+                            android:maxLength="100"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/option2_box"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:onClick="onCheckboxClicked"
+                            android:background="@android:color/darker_gray"/>
+
+                        <EditText
+                            android:id="@+id/option2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/rounded_box"
+                            android:padding="12dp"
+                            android:hint="Second Option"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="1"
+                            android:maxLength="100"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/option3_box"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:onClick="onCheckboxClicked"
+                            android:background="@android:color/darker_gray"/>
+
+                        <EditText
+                            android:id="@+id/option3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/rounded_box"
+                            android:padding="12dp"
+                            android:hint="Third Option"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="1"
+                            android:maxLength="100"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/option4_box"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:onClick="onCheckboxClicked"
+                            android:background="@android:color/darker_gray"/>
+
+                        <EditText
+                            android:id="@+id/option4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/rounded_box"
+                            android:padding="12dp"
+                            android:hint="First Option"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textColor="@android:color/black"
+                            android:layout_weight="1"
+                            android:maxLength="100"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/submit_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+                        android:background="@drawable/button_round_background_green"
+                        android:layout_marginBottom="20dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/show_recent_questions_tv"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:text="Preview"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="19sp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="6dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/show_players_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Players"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="12dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recent_questions_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                tools:listitem="@layout/recent_question_item"
+                android:layout_marginBottom="55dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/end_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post Quiz"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

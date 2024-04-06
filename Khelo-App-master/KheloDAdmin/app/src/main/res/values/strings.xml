@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KheloD Admin</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string-array name="detail_type_array">
+        <item>Text field</item>
+        <item>Dropdown</item>
+    </string-array>
+</resources>

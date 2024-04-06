@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.theindiecorp.khelodadmin">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.NoActionBar">
+        <activity android:name=".EditQuestionsActivity"></activity>
+        <activity android:name=".SportQuizActivity" />
+        <activity android:name=".AddSportsDetailsActivity" />
+        <activity android:name=".EditQuizActivity" />
+        <activity android:name=".EditEventActivity" />
+        <activity android:name=".EditArticleActivity" />
+        <activity android:name=".SportsDetailsActivity" />
+        <activity android:name=".SportsListActivity" />
+        <activity android:name=".BuyPointsActivity" />
+        <activity android:name=".AllPendingTransactionActivity" />
+        <activity android:name=".TransactionActivity" />
+        <activity android:name=".ArchivedUserActivity" />
+        <activity android:name=".UserViewActivity" />
+        <activity android:name=".QuizViewActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

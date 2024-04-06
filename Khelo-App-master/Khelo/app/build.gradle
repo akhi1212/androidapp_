@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('F:\\AndroidProjects\\Khelo-App\\khelod.jks')
+            storePassword 'password'
+            keyAlias = 'khelo'
+            keyPassword 'password'
+        }
+    }
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.theindiecorp.khelodapp"
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 6
+        versionName "1.6"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'com.google.firebase:firebase-dynamic-links:19.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'com.google.firebase:firebase-auth:19.4.0'
+    implementation 'com.google.firebase:firebase-database:19.4.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.mikhaellopez:circularimageview:3.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.razorpay:checkout:1.5.13'
+    implementation 'com.synnapps:carouselview:0.1.4'
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.3.4'
+    implementation "com.yuyakaido.android:card-stack-view:2.3.4"
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okio:okio:2.2.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
+}

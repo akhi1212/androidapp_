@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.RecentQuizActivity"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@android:color/black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/back_btn"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/go_back_left_arrow"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Title"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:fontFamily="sans-serif-thin"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="12dp">
+
+        <Button
+            android:id="@+id/show_questions_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Questions"
+            android:background="@drawable/rounded_btn"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/show_players_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Players"
+            android:background="@drawable/rounded_btn"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recent_quiz_question_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/quiz_participation_item"
+        android:visibility="visible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recent_quiz_player_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/players_item"
+        android:visibility="gone"/>
+
+</LinearLayout>

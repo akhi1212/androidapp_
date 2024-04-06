@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/menu_btn"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:background="@drawable/menu"
+                        android:layout_marginEnd="12dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/app_name"
+                        android:textColor="@color/dark_green"
+                        android:textSize="22sp"
+                        android:fontFamily="sans-serif-thin"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"/>
+
+                    <Button
+                        android:id="@+id/search_btn"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:background="@drawable/ic_search"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"/>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <Button
+                    android:id="@+id/share_Post"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="What's on your mind ? "
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/darker_gray"
+                    android:drawableRight="@drawable/camera"
+                    android:textAllCaps="false"
+                    android:background="#f0f0f0"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shimmer_auto_start="false"
+                android:layout_margin="15dp">
+
+                <include layout="@layout/shimmer_item"/>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/feedShimmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shimmer_auto_start="false"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmer_item"/>
+                    <include layout="@layout/shimmer_item"/>
+                    <include layout="@layout/shimmer_item"/>
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/new_match_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/match_item"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/feed_main_recycler_view_item"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/match_score_bottom_sheet"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

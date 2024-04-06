@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_green">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/share_article_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Article"
+            android:background="@drawable/rounded_btn"
+            android:layout_margin="8dp"
+            android:textColor = "#fff"/>
+
+        <Button
+            android:id="@+id/quiz_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Quiz"
+            android:textColor="@android:color/black"
+            android:background="@drawable/rounded_btn"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="12dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Your thoughts here..."
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textAlignment="textStart"
+                    android:layout_margin="12dp"
+                    app:boxBackgroundColor="@android:color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/article_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minLines="1"
+                        android:maxLines="10"
+                        android:textColor="@android:color/black"
+                        android:maxLength="5000"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Any Reference link"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textAlignment="textStart"
+                    android:layout_margin="12dp"
+                    app:boxBackgroundColor="@android:color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/article_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minLines="1"
+                        android:maxLines="3"
+                        android:gravity="top"
+                        android:textColor="@android:color/black"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp">
+
+                    <ImageView
+                        android:id="@+id/new_article_main_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_box"
+                        android:scaleType="centerCrop"
+                        android:minHeight="240dp"
+                        android:transitionName="main_item_main_image" />
+
+                    <TextView
+                        android:id="@+id/image_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Upload an image (Optional)"
+                        android:textAlignment="center"
+                        android:textSize="19sp"
+                        android:textColor="@android:color/black"/>
+
+                    <Button
+                        android:id="@+id/uploadImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:backgroundTint="#8AC640"
+                        android:layout_marginBottom="10dp"
+                        android:paddingStart="36dp"
+                        android:paddingEnd="36dp"
+                        android:text="Upload"
+                        android:background="@drawable/rounded_btn"
+                        android:textColor="@android:color/white" />
+
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/shareBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="#8AC640"
+                    android:minHeight="52dp"
+                    android:text="Share"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

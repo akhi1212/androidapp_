@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.UserDataActivity"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextColor="@android:color/black"
+        android:background="@android:color/white"
+        app:title="Finishing Up"
+        android:layout_alignParentTop="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/light_green"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Bio"
+                android:textColor="@android:color/black"
+                android:textSize="19dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your bio will be visible to other users"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="17dp"
+                android:layout_margin="12dp"/>
+
+            <EditText
+                android:id="@+id/bioEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="12dp"
+                android:background="@drawable/rounded_box"
+                android:maxLines="9"
+                android:minLines="5"
+                android:textColor="@android:color/black"
+                android:textSize="17dp"
+                android:textColorHint="@android:color/darker_gray"
+                android:layout_gravity="top"
+                android:gravity="top"
+                android:hint="Bio Here"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_btn"
+        android:text="Done"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="18dp"
+        android:layout_margin="12dp"/>
+
+</RelativeLayout>
